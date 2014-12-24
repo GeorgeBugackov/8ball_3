@@ -1,16 +1,19 @@
+:host {
+	width: 500px;
+	height: 500px;
+	margin: auto;
+	cursor: pointer;
+}
+
 .ball {
 	width: 500px;
 	height: 500px;
 	border-radius: 250px;
 	background: black;
-	margin: auto;
-	top:20%;
-	position: relative;
 	box-shadow:  0px 30px 30px rgba(0,0,0,0.5);
-	
 }
 
-.ball:hover {
+:host(:hover) {
 	-webkit-animation: ball-animation 100ms linear infinite;
 }
 
