@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<script src="Polymer/webcomponentsjs/webcomponents.js"></script>
+		<link rel="import" href="ball-el/ball-el.html">
+		<link rel="import" href="Polymer/components/core-toolbar/core-toolbar.html">
+		<link rel="import" href="Polymer/components/core-icon-button/core-icon-button.html">
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+		<core-toolbar class="header">
+  			<core-icon-button icon="menu" on-tap="{{menuAction}}"></core-icon-button>
+ 			<div flex>8-ball v3.0 Plex (Polymer.js)</div>
+  			<core-icon-button icon="more" on-tap="{{moreAction}}"></core-icon-button>
+		</core-toolbar>
+		<ball-el></ball-el>
+	</body>
+</html>
