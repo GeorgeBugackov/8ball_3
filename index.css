@@ -16,3 +16,7 @@ body {
 .header {
 	font-family: 'Archangelsk';
 }
+
+.quest_field {
+	margin: auto;
+}

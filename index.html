@@ -4,6 +4,8 @@
 	<head>
 		<script src="Polymer/webcomponentsjs/webcomponents.js"></script>
 		<link rel="import" href="ball-el/ball-el.html">
+		<link rel="import" href="question-field/question-field.html">
+		<link rel="import" href="question-list/question-list.html">
 		<link rel="import" href="Polymer/core-toolbar/core-toolbar.html">
 		<link rel="import" href="Polymer/core-icon-button/core-icon-button.html">
 		<link rel="stylesheet" href="index.css">
@@ -14,6 +16,8 @@
  			<div>8-ball v3.0 Plex (Polymer.js)</div>
   			<core-icon-button icon="more" on-tap="{{moreAction}}"></core-icon-button>
 		</core-toolbar>
+		<!-- <question-list></question-list> -->
+		<question-field></question-field>
 		<ball-el></ball-el>
 	</body>
 </html>
