@@ -1,0 +1,12 @@
+:host {
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border: 1px solid;
+	width: 300px;
+	z-index: 111;
+	min-height: 100px;
+	max-height: 500px;
+	right: 0px;
+	position: absolute;
+	margin-top: 50px;
+}

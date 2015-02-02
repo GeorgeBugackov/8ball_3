@@ -1,0 +1,22 @@
+{
+  "name": "8ball_3",
+  "version": "3",
+  "authors": [
+    "George Bugackov <george.bugackov@gmail.com>"
+  ],
+  "description": "polymer release",
+  "main": "index.html",
+  "moduleType": [
+    "es6"
+  ],
+  "license": "MIT",
+  "homepage": "8ball.esy.es",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.4",
+    "core-toolbar": "Polymer/core-toolbar#~0.5.4",
+    "paper-input": "Polymer/paper-input#~0.5.4",
+    "paper-button": "Polymer/paper-button#~0.5.4",
+    "core-list": "Polymer/core-list#~0.5.4"
+  }
+}
