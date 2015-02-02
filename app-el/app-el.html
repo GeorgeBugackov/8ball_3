@@ -16,10 +16,23 @@
 		</core-toolbar>
 		<question-list></question-list>
 		<ball-el></ball-el>
-		<paper-input label="your question..."></paper-input>
-		<paper-button>Ask it.</paper-button>
+		<paper-input label="your question..." value={{text}}></paper-input>
+		<paper-button on-click={{postQA}}>Ask it.</paper-button>
 	</template>
 	<script type="text/javascript">
-		Polymer({});
+		Polymer({
+			log: [],
+			text: '',
+			postQA: function (e) {
+				this.log.push({
+					answer: 'yes',
+					question: this.text
+				});	
+				console.log(this.log);
+			},
+			generateAnswer: function () {
+				
+			}
+		});
 	</script>
 </polymer-element>
