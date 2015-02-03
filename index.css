@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Archangelsk;
+    src: url(fonts/Archangelsk.ttf); 
+}
+
+@font-face {
+    font-family: Aero;
+    src: url(fonts/Aero_Matics_Stencil_Bold.ttf); 
+}
+
+body {
+	margin: 0px;
+	-webkit-user-select: none;
+}
+
+.header {
+	font-family: 'Archangelsk';
+}
+
+.quest_field {
+	margin: auto;
+}
