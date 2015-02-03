@@ -40,6 +40,14 @@
 	position: absolute;
 };
 
-:host .left {
-	left: 0px;
+:host ::-webkit-scrollbar {
+	width: 5px;
+	background-color: transparent;
+	border-radius: 100px;
+	border: 1px solid grey;
+} 
+
+:host ::-webkit-scrollbar-thumb {
+	background-color: grey;
+	border-radius: 100px;
 }
