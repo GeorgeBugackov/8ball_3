@@ -1,12 +1,12 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<polymer-element name="ball-el">
+<polymer-element name="ball-el" attributes="answer">
   <template>
   <link rel="stylesheet" href="ball-el.css">
   <div class="ball">
 		<div class="blink"></div>
 		<div class="circle">
-		  <div class="text">8</div>
+		  <div class="text">{{answer}}</div>
 		</div>
 	</div>
   </template>

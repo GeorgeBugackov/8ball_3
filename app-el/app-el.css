@@ -1,17 +1,27 @@
 .header {
 	font-family: Archangelsk;
 	font-size: 30px;
+
+	position: relative;
+	margin: auto;
+	color: black;
+	text-align: center;
+	text-shadow: 0px 3px 5px rgba(150, 150, 150, 1);
+/*	opacity: 0.3;*/
 }
 
-paper-input {
+:host paper-input {
 	display: block;
 	width: 500px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 50px;
+/*	bottom: 150px;
+	left: 38%;
+	position: absolute;*/
 }
 
-paper-button {
+:host paper-button {
 	color: white;
 	background-color: black;
 	font-family: Aero;
@@ -19,8 +29,17 @@ paper-button {
 	width: 100px;
 	margin-left: auto;
 	margin-right: auto;
+/*	bottom: 100px;
+	left: 48%;
+	position: absolute;*/
 }
 
-core-list {
-	
+:host h2 {
+	font-family: Aero;
+	right: 100px;
+	position: absolute;
+};
+
+:host .left {
+	left: 0px;
 }

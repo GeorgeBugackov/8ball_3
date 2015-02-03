@@ -1,12 +1,36 @@
 :host {
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
-	border: 1px solid;
 	width: 300px;
-	z-index: 111;
 	min-height: 100px;
-	max-height: 500px;
+	max-height: 600px;
 	right: 0px;
 	position: absolute;
 	margin-top: 50px;
+	overflow-y: auto;
+	text-align: center; 
+}
+
+:host .record {
+	padding: 10px;
+	margin: 10px;
+	word-wrap: break-word;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	box-shadow:  0px 5px 5px rgba(0,0,0,0.2);
+}
+
+:host .record .question {
+	font-family: Archangelsk;
+	text-align: left;
+	font-size: 20px;
+}
+
+:host .record .answer {
+	font-family: Aero;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: right;
 }

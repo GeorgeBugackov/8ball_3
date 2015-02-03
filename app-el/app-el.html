@@ -1,7 +1,6 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
-<link rel="import" href="../bower_components/core-icons/core-icons.html">
-<link rel="import" href="../bower_components/core-icon-button/core-icon-button.html">
+<link rel="import" href="../bower_components/core-animation/core-animation.html">
 <link rel="import" href="../bower_components/paper-input/paper-input.html">
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../custom_components/ball-el/ball-el.html">
@@ -11,28 +10,61 @@
 	<template fullBleed>
 		<link rel="stylesheet" type="text/css" href="app-el.css">
 		<core-toolbar>
-			<core-icon-button icon="menu"></core-icon-button>
 			<span class="header">8-ball v3.0 Plex (Polymer.js)</span>
 		</core-toolbar>
-		<question-list></question-list>
-		<ball-el></ball-el>
+		<h2>Answers log</h2>
+		<question-list log={{log}}></question-list>
+		<ball-el id="ball" answer={{answer}}></ball-el>
 		<paper-input label="your question..." value={{text}}></paper-input>
 		<paper-button on-click={{postQA}}>Ask it.</paper-button>
+
+		<core-animation id="shake" duration="50" iterations="10">
+  			<core-animation-keyframe>
+    			<core-animation-prop name="margin-top" value="50px"></core-animation-prop>
+  			</core-animation-keyframe>
+  			<core-animation-keyframe>
+    			<core-animation-prop name="margin-top" value="100px"></core-animation-prop>
+  			</core-animation-keyframe>
+  			<core-animation-keyframe>
+    			<core-animation-prop name="margin-top" value="150px"></core-animation-prop>
+  			</core-animation-keyframe>
+		</core-animation>
 	</template>
 	<script type="text/javascript">
 		Polymer({
 			log: [],
 			text: '',
+			answer: '8',
 			postQA: function (e) {
-				this.log.push({
-					answer: 'yes',
-					question: this.text
-				});	
-				console.log(this.log);
+				this.$.shake.target = this.$.ball;
+				this.$.shake.play();
+				
+				this.job('job1', function() {
+    				this.generateAnswer();
+  				}, 500);	
+				
+				this.job('job2', function() {
+    				this.restore();
+  				}, 2000);	
 			},
 			generateAnswer: function () {
+				var answers = ['Yes', 'No'],
+				answer = Math.round(Math.random());
 				
-			}
+    			this.answer = answers[answer];
+
+    			if (this.text !== '') {
+					this.log.push({
+						answer: this.answer,
+						question: this.text
+					});
+				}
+
+				this.text = '';
+			},
+			restore: function () {
+				this.answer = '8';
+			}			
 		});
 	</script>
 </polymer-element>

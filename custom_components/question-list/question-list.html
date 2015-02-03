@@ -1,11 +1,18 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<polymer-element name="question-list">
+<polymer-element attributes="log" name="question-list">
   <template>
     <link rel="stylesheet" href="question-list.css">
-    <div>There would be list of Q&A</div>
+    <template repeat="{{record in log}}">
+      <div class="record">
+        <div class="question">{{record.question}}</div>
+        <div class="answer">{{record.answer}}</div>
+      </div>
+    </template>
   </template>
   <script type="text/javascript">
-  	Polymer({});
+  	Polymer({
+      log: []
+    });
   </script>
 </polymer-element>
